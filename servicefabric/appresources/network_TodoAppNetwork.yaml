@@ -5,4 +5,4 @@ network:
   properties:
     description: This network has no description
     kind: local
-    networkAddressPrefix: 10.0.0.4/22
+    networkAddressPrefix: 10.0.0.0/22
