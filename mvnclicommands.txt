@@ -1,5 +1,5 @@
 1. mvn sf-mesh:init -DapplicationName=TodoApp
-2. mvn sf-mesh:addservice -DapplicationName=TodoApp -DserviceName=TodoAppSvc -DimageName=rapatchi/todoapplinux:6.6 -DlistenerPort=8080 -DnetworkRef=TodoAppNetwork -DmemoryUsage=2.0
+2. mvn sf-mesh:addservice -DapplicationName=TodoApp -DserviceName=TodoAppSvc -DimageName=rapatchi/todoappwin:1.1 -DlistenerPort=8080 -DnetworkRef=TodoAppNetwork -DmemoryUsage=2.0
 3. mvn sf-mesh:addnetwork -DapplicationName=TodoApp -DserviceName=TodoAppSvc -DnetworkName=TodoAppNetwork -DnetworkAddressPrefix=10.0.0.0/22 -DlistenerName=TodoAppSvcListener
 4. mvn sf-mesh:addgateway -DapplicationName=TodoApp -DdestinationNetwork=TodoAppNetwork -DgatewayName=TodoAppGateway -DlistenerName=TodoAppSvcListener -DserviceName=TodoAppSvc -DsourceNetwork=open -DtcpPort=80
 
