@@ -10,8 +10,8 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import microsoft.servicefabric.reliablecache.spring.ReliableCacheManager;
-import microsoft.servicefabric.data.reliablecollections.jsr107.provider.ReliableCacheProvider;
+import com.microsoft.azure.servicefabric.data.reliablecollections.jsr107.provider.ReliableCacheProvider;
+import com.microsoft.azure.servicefabric.data.reliablecache.spring.ReliableCacheManager;
 
 /**
  * Configuration to enable caching through Reliable Cache Manager.

@@ -19,7 +19,7 @@ import org.springframework.web.servlet.resource.ResourceHttpRequestHandler;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 
-import microsoft.servicefabric.simplemodel.springboot.PartitionResolutionHandler;
+import com.microsoft.azure.servicefabric.spring.interceptors.PartitionResolutionHandler;
 import microsoft.servicefabric.services.client.ServicePartitionKey;
 
 /**
