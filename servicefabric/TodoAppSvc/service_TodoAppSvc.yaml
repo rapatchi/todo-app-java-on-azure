@@ -1,3 +1,4 @@
+## Service Definition ##
 application:
   schemaVersion: 1.0.0-preview2
   name: TodoApp
@@ -6,13 +7,10 @@ application:
       - name: TodoAppSvc
         properties:
           description: This service has no description
-          osType: Linux
+          osType: Windows
           codePackages:
            - name: TodoAppSvcCodePackage
-             image: suhuruli/todo-app-java-on-azure:1.0-SNAPSHOT
-             reliableCollectionsRefs:
-              - name: TestReliableCollections
-                doNotPersistState: True
+             image: rapatchi/todoappwin:1.0
              endpoints:
                 - name: TodoAppSvcListener
                   port: 8080
@@ -20,6 +18,11 @@ application:
                 requests:
                   cpu: 0.5
                   memoryInGB: 2.0
+             reliableCollectionsRefs:
+              - name: TestReliableCollections
+                doNotPersistState: True
           replicaCount: 1
           networkRefs:
-            - name: TodoAppNetwork
+          - name: TodoAppNetwork
+            endpointRefs:
+            - name: TodoAppSvcListener

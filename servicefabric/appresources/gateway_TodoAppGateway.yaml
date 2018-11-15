@@ -1,0 +1,17 @@
+## Gateway Definition ##
+gateway:
+  schemaVersion: 1.0.0-preview2
+  name: TodoAppGateway
+  properties:
+    description: This gateway has no description
+    sourceNetwork:
+      name: open
+    destinationNetwork:
+      name: TodoAppNetwork
+    tcp:
+      - name: TodoAppSvcListenerConfig
+        port: 80
+        destination:
+          applicationName: TodoApp
+          serviceName: TodoAppSvc
+          endpointName: TodoAppSvcListener
