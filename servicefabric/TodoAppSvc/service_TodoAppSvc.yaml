@@ -10,7 +10,7 @@ application:
           osType: Windows
           codePackages:
            - name: TodoAppSvcCodePackage
-             image: rapatchi/todoappwin:1.3
+             image: rapatchi/empdir-win:10.0
              endpoints:
                 - name: TodoAppSvcListener
                   port: 8080
